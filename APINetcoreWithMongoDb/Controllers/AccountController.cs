@@ -35,21 +35,5 @@ namespace APINetcoreWithMongoDb.Controllers
         {
             return await _repo.GetByKeyWord(keyword);
         }
-
-        [HttpPost(Name = "CreateAccount")]
-        public async Task<bool> CreateAccount(AccountRequest request)
-        {
-            return await _repo.CreateAsync(request);
-        }
-        [HttpPut(Name = "UpdateAccount")]
-        public async Task<bool> UpdateAccount(AccountRequest request)
-        {
-            return await _repo.UpdateAsync(request);
-        }
-        [HttpDelete(Name = "DeleteAccount")]
-        public async Task<bool> DeleteAccount(AccountRequest request)
-        {
-            return await _repo.DeleteAsync(request);
-        }
     }
 }
